@@ -85,6 +85,11 @@ Desktop Screen Size above >786
 - Twitter: [@twitterhandle](https://twitter.com/waqaskanju)
 - LinkedIn: [@LinkedIn](https://linkedin.com/in/waqaskanju)
 
+👤 **Mauricio Cantillo**
+- GitHub: [![GitHub Badge](https://img.shields.io/badge/-Andyveloper-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/Andyveloper)
+- Twitter: [![Twitter Badge](https://img.shields.io/badge/-MauroCantillo_-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/MauroCantillo_)
+- LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-Mauricio_Cantillo_Moreno-white?logo=LinkedIn&logoColor=1DA1F2&style=plastic)](https://www.linkedin.com/in/mauricio-cantillo-moreno/)
+
 
 ## 🤝 Contributing
 
