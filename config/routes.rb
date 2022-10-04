@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_for :users, path: ''
+  devise_for :users, path: '' do
+    get '/sign_out' => 'devise/sessions#destroy'
+  end
   resources :recipes, except: [:update]
   resources :foods, except: [:update]
   resources :recipe_foods
