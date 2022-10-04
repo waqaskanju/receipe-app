@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   devise_for :users, path: ''
-  resources :users, only: %i[index show] do
+  resources :users, only: %i[index show create destroy] do
     resources :foods, except: [:update]
     resources :recipes, except: [:update]
     resources :recipe_foods
