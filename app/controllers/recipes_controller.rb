@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
     @public_recipes = @recipes.where(user: current_user)
   end
-  
+
   # GET /recipes/1 or /recipes/1.json
   def show
     @recipe = Recipe.find(params[:id])
