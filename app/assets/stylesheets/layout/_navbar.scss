@@ -23,12 +23,12 @@
     &__element {
       padding: 0.5rem;
       margin: 0.5rem;
-      color: royalblue;
+      color: #7895B2;
       font-weight: 600;
       text-transform: capitalize;
       transition: all 0.5s ease; 
       &:hover {
-        color: darken(royalblue, 25%);
+        color: darken(#7895B2, 30%);
       }
     }
   }
