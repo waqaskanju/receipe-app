@@ -17,7 +17,8 @@ recipe2 = Recipe.create!(user: user1, name: 'Burger', preparation_time: 10, cook
 recipe3 = Recipe.create!(user: user1, name: 'Bandeja Paisa', preparation_time: 10, cooking_time: 15,
                          description: 'Colombian food', public: true)
 
+user2 = User.create(name: 'TestUser2', email: 'test2@abc.com', password: '123456',
+                    password_confirmation: '123456')
 
-                         user2 = User.create(name: 'TestUser2', email: 'test2@abc.com', password: '123456', password_confirmation: '123456')
-
-                         food1 = Food.create(name:'Handi',measurement_unit:"Kg", price:"52",quantity:"5",user_id:user1_id)
+food1 = Food.create(name: 'Handi', measurement_unit: 'Kg', price: '52', quantity: '5',
+                    user_id: user1_id)
