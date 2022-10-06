@@ -11,15 +11,16 @@ class RecipeFoodsController < ApplicationController
   # GET /recipe_foods/1 or /recipe_foods/1.json
   def show
     @food = Food.find_by(user: current_user)
-    @recipe_foods = RecipeFood.find(params[:recipe_id])
+  #  @recipe_foods = RecipeFood.find(params[:recipe_id])
   end
 
   # GET /recipe_foods/new
   def new
-    @food = Food.find_by(user: current_user)
+    # @food = Food.find_by(user: current_user)
+    # @recipe_food = RecipeFood.new
+    # @recipe_food.food = @food
+    # @recipe_food.recipe = Recipe.find(params[:recipe_id])
     @recipe_food = RecipeFood.new
-    @recipe_food.food = @food
-    @recipe_food.recipe = Recipe.find(params[:recipe_id])
   end
 
   # GET /recipe_foods/1/edit
@@ -27,7 +28,12 @@ class RecipeFoodsController < ApplicationController
 
   # POST /recipe_foods or /recipe_foods.json
   def create
+    #@recipe = Recipe.find(params[:recipe_id])
+    @receip1 = Recipe.find(2)
+    @food1 = Food.find(5)
     @recipe_food = RecipeFood.new(recipe_food_params)
+    @recipe_food.recipe = @receip1
+    @recipe_food.food = @food1    #@recipe_food = @recipe.recipe_foods.build(recipe_food_params)
 
     respond_to do |format|
       if @recipe_food.save
@@ -55,10 +61,14 @@ class RecipeFoodsController < ApplicationController
 
   # DELETE /recipe_foods/1 or /recipe_foods/1.json
   def destroy
+
+    @recipe = Recipe.find(params[:recipe_id])
+    @recipe_food = @recipe.recipe_foods.find(params[:id])
+    
     @recipe_food.destroy
 
     respond_to do |format|
-      format.html { redirect_to recipe_foods_url, notice: 'Recipe food is successfully destroyed.' }
+      format.html { redirect_to recipe_foods_url, notice: 'Recipe food is destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -72,6 +82,6 @@ class RecipeFoodsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def recipe_food_params
-    params.require(:recipe_food).permit(:quantity)
+    params.require(:recipe_food).permit(:food_id, :quantity)
   end
 end
