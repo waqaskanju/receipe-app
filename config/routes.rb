@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   get 'shopping_list', to: 'shopping_list#index'
   resources :public_recipes
 
-
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 # helper method
- require 'rails_helper'
+require 'rails_helper'
 # require 'spec_helper'
 
 # Assert that user is a model
