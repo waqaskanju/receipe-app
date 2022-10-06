@@ -17,4 +17,14 @@ RSpec.describe Food, type: :model do
     subject.name = nil
     expect(subject).to_not be_valid
   end
+
+  # test 2 price should be integer
+  it 'preparation time an integer' do
+    expect(subject.price).to be_an_integer
+  end
+
+  # test 4 price should be integer
+  it 'preparation time an integer' do
+    expect(subject.quanity).to be_an_integer
+  end
 end
