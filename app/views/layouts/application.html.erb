@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ReceipeApp</title>
+    <title>Receipe App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,9 +13,7 @@
   <div class="center">
   <p class="notice">  <%= notice %> </p>
   <p class="alert"> <%= alert %> </p>
-    <% if user_signed_in? %>
-          <h1> you are signed in </h1>
-    <% end %>
+ 
     
     <%= yield %>
     </div>
