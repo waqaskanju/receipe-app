@@ -10,6 +10,11 @@
     <%= render food %>
     <td>
       <%= link_to "Detail", food %>
+      <%if food.user_id == current_user.id %>
+      <%= button_to "Delete", {:controller => :foods, :action => 'destroy', :id => food.id}, method: :delete %>
+    <%else%>
+    <%= link_to food_path(food.id), :action => 'go'%>
+    <%end%>
     </td>
     </tr>
   <% end %>
