@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
   # GET /recipes/1 or /recipes/1.json
   def show
     @recipe = Recipe.find(params[:id])
+    @food = Food.all
   end
 
   # GET /recipes/new
@@ -61,6 +62,12 @@ class RecipesController < ApplicationController
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully deleted.' }
       format.json { head :no_content }
     end
+  end
+
+  def add_ingredient
+    @food = Food.find(params[:id]).name
+    @quantity = Food.find(params[:id]).quantity
+    RecipeFood.create!(food: @food, quantity: @quantity)
   end
 
   private
