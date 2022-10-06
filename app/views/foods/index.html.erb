@@ -1,13 +1,18 @@
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Foods</h1>
 
 <div id="foods">
+<table border="1" width="500">
+<tr><th> Name </th> <th>Unit</th> <th>Price</th> <th>Quantity</th><th>Action</th>
   <% @foods.each do |food| %>
+  <tr>
     <%= render food %>
-    <p>
+    <td>
       <%= link_to "Show this food", food %>
-    </p>
+    </td>
+    </tr>
   <% end %>
 </div>
 
