@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-
-# Return the food name and quanity and price for shopping list.
+  # Return the food name and quanity and price for shopping list.
   def ingredient(recipe_food)
     quantity = recipe_food.quantity - recipe_food.food.quantity
     #  only return if zero or negative.

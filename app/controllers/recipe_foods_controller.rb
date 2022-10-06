@@ -11,7 +11,6 @@ class RecipeFoodsController < ApplicationController
   # GET /recipe_foods/1 or /recipe_foods/1.json
   def show
     @food = Food.find_by(user: current_user)
-  #  @recipe_foods = RecipeFood.find(params[:recipe_id])
   end
 
   # GET /recipe_foods/new
@@ -29,7 +28,8 @@ class RecipeFoodsController < ApplicationController
     @food1 = Food.find(5)
     @recipe_food = RecipeFood.new(recipe_food_params)
     @recipe_food.recipe = @receip1
-    @recipe_food.food = @food1  
+    @recipe_food.food = @food1
+
 
     respond_to do |format|
       if @recipe_food.save
@@ -57,10 +57,9 @@ class RecipeFoodsController < ApplicationController
 
   # DELETE /recipe_foods/1 or /recipe_foods/1.json
   def destroy
-
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = @recipe.recipe_foods.find(params[:id])
-    
+
     @recipe_food.destroy
 
     respond_to do |format|
