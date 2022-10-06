@@ -16,4 +16,15 @@ RSpec.describe User, type: :model do
     subject.name = nil
     expect(subject).to_not be_valid
   end
+
+  # test 2 desc shold not be empty.
+  it 'The description should not be empty' do
+    subject.description = nil
+    expect(subject).to_not be_valid
+  end
+
+  # tes 3 preparatoin_time should be integer
+  it 'preparation time an integer' do
+    expect(subject.preparation_time).to be_an_integer
+  end
 end
