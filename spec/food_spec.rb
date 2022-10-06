@@ -23,7 +23,7 @@ RSpec.describe Food, type: :model do
     expect(subject.price).to be_an_integer
   end
 
-  # test 4 price should be integer
+  # test 3 price should be integer
   it 'preparation time an integer' do
     expect(subject.quanity).to be_an_integer
   end
