@@ -15,7 +15,6 @@ class RecipeFoodsController < ApplicationController
 
   # GET /recipe_foods/new
   def new
-  
     @recipe_food = RecipeFood.new
   end
 
@@ -29,7 +28,6 @@ class RecipeFoodsController < ApplicationController
     @recipe_food = RecipeFood.new(recipe_food_params)
     @recipe_food.recipe = @receip1
     @recipe_food.food = @food1
-
 
     respond_to do |format|
       if @recipe_food.save
