@@ -20,7 +20,5 @@
   <%end%>
 <%if recipe.user_id == current_user.id %>
   <%= button_to "Delete this recipe", {:controller => :recipes, :action => 'destroy', :id => recipe.id}, method: :delete %>
-<%else%>
-<%= link_to recipe_path(recipe.id), :action => 'go'%>
 <%end%>
 </div>
