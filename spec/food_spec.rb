@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # helper method
 require 'rails_helper'
 # require 'spec_helper'
