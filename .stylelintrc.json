@@ -10,7 +10,11 @@
           "apply",
           "variants",
           "responsive",
-          "screen"
+          "screen",
+          "use",
+          "mixin",
+          "forward",
+          "include"
         ]
       }
     ],
