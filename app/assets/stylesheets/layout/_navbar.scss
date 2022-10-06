@@ -1,0 +1,35 @@
+@import 'mixins';
+
+.header {
+  @include flex(flex-start);
+  
+  width: auto;
+  height: 7rem;
+  background-color: #ffff;
+
+}
+
+.header__nav {
+  padding: 1rem;
+  margin-right: auto;
+
+  &_list {
+    @include flex(flex-start);
+    
+    &__img {
+      width: 7rem;
+    }
+    
+    &__element {
+      padding: 0.5rem;
+      margin: 0.5rem;
+      color: #7895B2;
+      font-weight: 600;
+      text-transform: capitalize;
+      transition: all 0.5s ease; 
+      &:hover {
+        color: darken(#7895B2, 30%);
+      }
+    }
+  }
+}

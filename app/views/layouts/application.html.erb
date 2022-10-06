@@ -13,8 +13,29 @@
   <div class="center">
   <p class="notice">  <%= notice %> </p>
   <p class="alert"> <%= alert %> </p>
- 
-    
+  <header class='header'>
+    <nav class='header__nav'>
+      <ul class='header__nav_list'>
+        <li class='header__nav_list__element'><%= image_tag 'logo.png',class:'header__nav_list__img'%></li>
+        <%=link_to users_path(), action: 'go' do%>
+        <li class='header__nav_list__element'>Home</li>
+        <%end%>
+        <%=link_to recipes_path(), action: 'go' do%>
+        <li class='header__nav_list__element'>My Recipes</li>
+        <%end%>
+        <%=link_to public_recipes_path(), action: 'go' do%>
+        <li class='header__nav_list__element'>Public Recipes</li>
+        <%end%>
+        <%=link_to foods_path(), action:'go' do%>
+        <li class='header__nav_list__element'>Food</li>
+        <%end%>
+        <%=link_to users_path(), action:'go' do %>
+        <li class='header__nav_list__element'>Shipping List</li>
+        <%end%>
+      </ul>
+    </nav>
+  </header>
+
     <%= yield %>
     </div>
   </body>
