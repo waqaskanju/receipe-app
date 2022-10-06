@@ -16,10 +16,7 @@ class RecipeFoodsController < ApplicationController
 
   # GET /recipe_foods/new
   def new
-    # @food = Food.find_by(user: current_user)
-    # @recipe_food = RecipeFood.new
-    # @recipe_food.food = @food
-    # @recipe_food.recipe = Recipe.find(params[:recipe_id])
+  
     @recipe_food = RecipeFood.new
   end
 
@@ -28,12 +25,11 @@ class RecipeFoodsController < ApplicationController
 
   # POST /recipe_foods or /recipe_foods.json
   def create
-    #@recipe = Recipe.find(params[:recipe_id])
     @receip1 = Recipe.find(2)
     @food1 = Food.find(5)
     @recipe_food = RecipeFood.new(recipe_food_params)
     @recipe_food.recipe = @receip1
-    @recipe_food.food = @food1    #@recipe_food = @recipe.recipe_foods.build(recipe_food_params)
+    @recipe_food.food = @food1  
 
     respond_to do |format|
       if @recipe_food.save
