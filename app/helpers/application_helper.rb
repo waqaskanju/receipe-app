@@ -1,3 +1,4 @@
+# this file contain helps for shopingcard.
 module ApplicationHelper
   # Return the food name and quanity and price for shopping list.
   def ingredient(recipe_food)
