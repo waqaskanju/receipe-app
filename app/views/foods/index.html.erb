@@ -1,0 +1,24 @@
+
+<p style="color: green"><%= notice %></p>
+<div id="foods">
+<h1>Foods Page</h1>
+<h3> Here New Foods can be added/edited and also deleted </h3>
+<table border="1" width="500">
+<tr><th> Name </th> <th>Unit</th> <th>Price</th> <th>Quantity</th><th>Action</th>
+  <% @foods.each do |food| %>
+  <tr>
+    <%= render food %>
+    <td>
+      <%= link_to "Detail", food %>
+      <%if food.user_id == current_user.id %>
+      <%= button_to "Delete", {:controller => :foods, :action => 'destroy', :id => food.id}, method: :delete %>
+    <%else%>
+    <%= link_to food_path(food.id), :action => 'go'%>
+    <%end%>
+    </td>
+    </tr>
+  <% end %>
+  <%= link_to " Add New food", new_food_path %>
+</div>
+
+
