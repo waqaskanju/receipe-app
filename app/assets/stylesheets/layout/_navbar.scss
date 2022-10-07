@@ -1,12 +1,12 @@
 @import 'mixins';
+$hoverColor: darken(#7895b2, 30%);
 
 .header {
   @include flex(flex-start);
-  
+
   width: auto;
   height: 7rem;
   background-color: #ffff;
-
 }
 
 .header__nav {
@@ -15,20 +15,21 @@
 
   &_list {
     @include flex(flex-start);
-    
+
     &__img {
       width: 7rem;
     }
-    
+
     &__element {
       padding: 0.5rem;
       margin: 0.5rem;
-      color: #7895B2;
+      color: #7895b2;
       font-weight: 600;
       text-transform: capitalize;
-      transition: all 0.5s ease; 
+      transition: all 0.5s ease;
+
       &:hover {
-        color: darken(#7895B2, 30%);
+        color: $hoverColor;
       }
     }
   }

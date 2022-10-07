@@ -2,7 +2,7 @@
 
 # Ruby Blog
 
-The repo contain a blog app create using ruby on rails. It used postgres database for storing data.
+The repo contain a Recipe app create using ruby on rails. It used postgres database for storing data.
 
 ## Built With
 

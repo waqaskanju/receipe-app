@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class PublicRecipesController < ApplicationController
   before_action :set_recipe, only: %i[show edit update destroy]
 

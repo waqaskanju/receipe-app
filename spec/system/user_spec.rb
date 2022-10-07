@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Link library
 require 'rails_helper'
 

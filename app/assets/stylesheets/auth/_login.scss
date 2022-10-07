@@ -1,12 +1,12 @@
 .login_background {
- position: absolute;
- top: 0;
- left: 0;
- bottom: 0;
- right: 0;
- z-index: -1;
- background-image: url('https://media.istockphoto.com/photos/white-lines-and-spheres-picture-id1135638647?b=1&k=20&m=1135638647&s=170667a&w=0&h=j32QwPBMCmdX9ViKWvitis6N3l3Wl-lBEl1Ut9ImiBk=');
- background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url('https://media.istockphoto.com/photos/white-lines-and-spheres-picture-id1135638647?b=1&k=20&m=1135638647&s=170667a&w=0&h=j32QwPBMCmdX9ViKWvitis6N3l3Wl-lBEl1Ut9ImiBk=');
+  background-size: cover;
 }
 
 .login_container {
@@ -16,7 +16,7 @@
   flex-direction: column;
   padding: 5%;
   margin-right: auto;
-  background-color: transparentize($color: #561D5E, $amount: 0.5);
+  background-color: transparentize($color: #561d5e, $amount: 0.5);
   justify-content: flex-start;
   align-items: center;
 }
